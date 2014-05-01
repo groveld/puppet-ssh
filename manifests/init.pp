@@ -32,7 +32,7 @@ class ssh (
         owner       => root,
         group       => root,
         mode        => '0644',
-        content     => template('sshd/sshd_config.erb'),
+        content     => template('ssh/sshd_config.erb'),
         require     => Package['openssh-server'],
         notify      => Service['ssh'],
     }
